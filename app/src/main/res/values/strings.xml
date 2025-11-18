@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MiStation Pro</string>
+    <string name="fps_label">FPS: %d</string>
+    <string name="memory_label">Memory: %s</string>
+    <string name="game_miside">MiSide</string>
+    <string name="game_charlotte">Hello Charlotte</string>
+    <string name="game_doki">Doki Doki Literature Club</string>
+</resources>

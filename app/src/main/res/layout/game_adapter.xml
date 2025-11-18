@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#2d2d2d"
+    android:layout_margin="8dp"
+    android:gravity="center">
+
+    <!-- Иконка игры -->
+    <ImageView
+        android:id="@+id/gameIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="#3d3d3d"
+        android:padding="8dp" />
+
+    <!-- Название игры -->
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Name"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <!-- Жанр игры -->
+    <TextView
+        android:id="@+id/gameGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textColor="#aaaaaa"
+        android:textSize="12sp" />
+
+</LinearLayout>
