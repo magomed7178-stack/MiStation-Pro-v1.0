@@ -27,12 +27,12 @@ class MainActivity : AppCompatActivity() {
     
     private fun setupGamesList() {
         val games = listOf(
-            Game("MiSide", "Horror", R.drawable.miside_icon),
-            Game("Hello Charlotte", "Psychological", R.drawable.charlotte_icon),
-            Game("Doki Doki Literature Club", "Visual Novel", R.drawable.doki_icon)
+            Game("MiSide", "Horror", android.R.drawable.ic_media_play),
+            Game("Hello Charlotte", "Psychological", android.R.drawable.ic_media_play),
+            Game("Doki Doki Literature Club", "Visual Novel", android.R.drawable.ic_media_play)
         )
         
-        gameGrid.adapter = GameAdapter(this, games)
+        gameGrid.adapter = ArrayAdapter(this, R.layout.game_adapter, games)
     }
     
     private fun startPerformanceMonitoring() {
