@@ -2,7 +2,6 @@ package com.mistation.pro
 
 import android.view.*
 import android.widget.*
-import androidx.recyclerview.widget.RecyclerView
 
 class GameAdapter(
     private val context: android.content.Context,
@@ -16,16 +15,20 @@ class GameAdapter(
     override fun getItemId(position: Int): Long = position.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.game_adapter, parent, false)
+        // Используем стандартный макет Android вместо game_adapter
+        val view = convertView ?: LayoutInflater.from(context)
+            .inflate(android.R.layout.simple_list_item_2, parent, false)
+        
         val game = getItem(position)
         
-        val gameName: TextView = view.findViewById(R.id.gameName)
-        val gameGenre: TextView = view.findViewById(R.id.gameGenre)
-        val gameIcon: ImageView = view.findViewById(R.id.gameIcon)
+        // simple_list_item_2 имеет text1 и text2
+        val text1: TextView = view.findViewById(android.R.id.text1)
+        val text2: TextView = view.findViewById(android.R.id.text2)
         
-        gameName.text = game.name
-        gameGenre.text = game.genre
-        gameIcon.setImageResource(game.icon)
+        text1.text = game.name
+        text2.text = game.genre
+        text1.setTextColor(0xFFFFFFFF.toInt())  // Белый текст
+        text2.setTextColor(0xFFCCCCCC.toInt())  // Серый текст
         
         view.setOnClickListener {
             simulateGameLaunch(game.name)
