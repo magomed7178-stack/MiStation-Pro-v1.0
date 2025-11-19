@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="MiStation Pro"
-        android:theme="@style/Theme.MiStationPro">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         
         <activity
             android:name=".MainActivity"
